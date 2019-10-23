@@ -13,6 +13,7 @@ export class HeroesComponent implements OnInit {
     name: 'Windstorm'
   };
   heroes = HEROES;
+  // Add the following onSelect() method, which assigns the clicked hero from the template to the component's selectedHero.
   selectedHero: Hero;
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
