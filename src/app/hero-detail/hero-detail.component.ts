@@ -6,7 +6,8 @@ import { Hero } from '../hero'
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-
+  //Add a hero property, preceded by the @Input() decorator.
+  @Input() hero: Hero;
   constructor() { }
 
   ngOnInit() {
