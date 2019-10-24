@@ -13,7 +13,6 @@ export class HeroesComponent implements OnInit {
     id: 1,
     name: 'Windstorm'
   };
-  // heroes = HEROES;
   heroes: Hero[];
   getHeroes(): void{
     this.heroes = this.heroService.getHeroes();
@@ -26,6 +25,7 @@ export class HeroesComponent implements OnInit {
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
+    this.getHeroes();
   }
 
 }
