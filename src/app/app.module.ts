@@ -11,9 +11,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 
-const appRoutes: Routes = [
-  {path: ''}
-]
+
 @NgModule({
   declarations: [
     AppComponent,
