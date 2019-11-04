@@ -21,7 +21,10 @@ export class HeroService {
   private heroesUrl = 'api/heroes';  // URL to web api
   getHeroes(): Observable<Hero[]> {
     // TODO: send the message _after_ fetching the heroes
-    return this.http.get<Hero[]>(this.heroesUrl);
+    return this.http.get<Hero[]>(this.heroesUrl)
+    .pipe(
+      catchError(this.handleError<Hero[]>('getHeroes', []))
+    );
   }
   getHero(id: number): Observable<Hero> {
     // TODO: send the message _after_ fetching the hero
