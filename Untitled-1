@@ -1,0 +1,15 @@
+$id = 2;
+    $update = "UPDATE ".DB_PREFIX."crud SET name = '$name', age = '$age', dept = '$dept', school = '$school' WHERE id = '$id'";
+
+    $id_1 = 1;
+    $age_1 = 19;
+
+    $update2 = "UPDATE ".DB_PREFIX."crud SET name = '$name', age = '$age_1', dept = '$dept', school = '$school' WHERE id = '$id_1'";
+
+
+    $q = DB->query($update);
+    var_dump($q);
+
+    $q = DB->get_query_set("$update2");
+
+    var_dump($q);
