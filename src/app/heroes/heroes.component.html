@@ -7,8 +7,7 @@
   <button (click)="add(heroName.value); heroName.value=''">
     add
   </button>
-  <button class="delete" title="delete hero"
-  (click)="delete(hero)">x</button>
+  
 </div>
 <div><span>ID: {{ hero.id }}</span></div>
 <div><span>NAME: {{ hero.name }}</span></div>
@@ -24,6 +23,8 @@
     <a routerLink="/detail/{{hero.id}}">
       <span class="badge">{{hero.id}}</span> {{hero.name}}
     </a>
+    <button class="delete" title="delete hero"
+  (click)="delete(hero)">x</button>
   </li>
 </ul>
 
