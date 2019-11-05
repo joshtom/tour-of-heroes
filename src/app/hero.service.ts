@@ -58,6 +58,9 @@ private handleError<T> (operation = 'operation', result?: T) {
     return of(result as T);
   };
 }
+httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 /** PUT: update the hero on the server */
 updateHero (hero: Hero): Observable<any> {
   return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
